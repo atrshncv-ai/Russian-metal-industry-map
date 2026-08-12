@@ -1,24 +1,53 @@
 # Russian Metal Industry Map
 
-Актуальная версия интерактивной карты металлургии России на `Next.js + React + TypeScript`.
+An interactive map of the Russian metallurgy industry — a research/coursework project built with **Next.js + React + TypeScript**.
 
-Репозиторий содержит **полное приложение**, а не старую статическую HTML-версию.
+> **Status: experiment** — research project, not a production service.
 
-## Что реализовано
+## Features
 
-- Интерактивная карта регионов РФ с переключением показателей.
-- Клик по региону открывает подробную статистику по всем индикаторам.
-- Градация показателей через заливку оттенками синего.
-- Легенда для каждого показателя с целыми интервалами.
-- Экспорт карты в PNG вместе с названием и легендой.
-- Полный список всех 89 регионов внизу экрана (алфавитный порядок).
-- Поддержка городов федерального значения маркерами: Москва, Санкт-Петербург, Севастополь.
+- Interactive map of Russian regions with switchable indicators
+- Click a region to see detailed statistics for all indicators
+- Indicator gradation via blue shading + legend with integer intervals
+- Export the map to PNG together with title and legend
+- Full alphabetical list of all 89 regions
+- Federal cities (Moscow, Saint Petersburg, Sevastopol) marked on the map
+
+## Data & map
+
+- Data: [`public/data/map-data.json`](public/data/map-data.json)
+- SVG map: [`public/data/russia-map-clean.svg`](public/data/russia-map-clean.svg)
+
+## Local run
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`. Build: `npm run build && npm run start`.
+
+---
+
+# Russian Metal Industry Map
+
+Интерактивная карта металлургии России — исследовательский/учебный проект на **Next.js + React + TypeScript**.
+
+> **Статус: experiment** — исследовательский проект, не production-сервис.
+
+## Возможности
+
+- Интерактивная карта регионов РФ с переключением показателей
+- Клик по региону открывает подробную статистику по всем индикаторам
+- Градация показателей заливкой оттенками синего + легенда с целыми интервалами
+- Экспорт карты в PNG вместе с названием и легендой
+- Полный список всех 89 регионов (алфавитный порядок)
+- Города федерального значения (Москва, Санкт-Петербург, Севастополь) — маркерами
 
 ## Данные и карта
 
 - Данные: [`public/data/map-data.json`](public/data/map-data.json)
 - SVG-карта: [`public/data/russia-map-clean.svg`](public/data/russia-map-clean.svg)
-- Подписи (референс): [`public/data/russia-map-labeled.svg`](public/data/russia-map-labeled.svg)
 
 ## Локальный запуск
 
@@ -27,17 +56,4 @@ npm install
 npm run dev
 ```
 
-Откройте: `http://localhost:3000`
-
-## Сборка
-
-```bash
-npm run build
-npm run start
-```
-
-## Основной код интерфейса
-
-- Страница карты: [`src/app/page.tsx`](src/app/page.tsx)
-- Метаданные приложения: [`src/app/layout.tsx`](src/app/layout.tsx)
-- API данных карты: [`src/app/api/map-data/route.ts`](src/app/api/map-data/route.ts)
+Откройте `http://localhost:3000`. Сборка: `npm run build && npm run start`.
